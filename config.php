@@ -21,7 +21,7 @@ define('DSN', 'mysql:host=localhost;dbname=contact_dotinstall');
 define('DB_USER', 'dbuser');
 define('DB_PASSWORD', 'rwrwrwrw0521');
 
-define('SITE_URL', '192.168.33.10/contact/index.php');
+define('SITE_URL', 'http://192.168.33.10/php/contact/');
 define('ADMIN_URL', SITE_URL.'admin/');
 
 error_reporting(E_ALL & ~E_NOTICE);
