@@ -65,13 +65,13 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
 	<body>
 		<h1>お問い合わせフォーム</h1>
 		<form action="" method="POST">
-			<p>お名前：<input type="text" name="name" value=""></p>
+			<p>お名前：<input type="text" name="name" value="<?php echo h($name); ?>"></p>
 			<p>
-				メールアドレス*：<input type="text" name="email" value="">
+				メールアドレス*：<input type="text" name="email" value="<?php echo h($email); ?>">
 				<?php if ($error['email']) { echo h($error['email']); } ?>
 			</p>
 			<p>内容*：</p>
-			<p><textarea name="memo" cols="40" rows="5"></textarea></p>
+			<p><textarea name="memo" cols="40" rows="5"><?php echo h($memo); ?></textarea></p>
 			<?php if ($error['memo']) { echo h($error['memo']); } ?>
 			<p><input type="submit" value="送信"></p>
 			<input type="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">

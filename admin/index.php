@@ -35,7 +35,7 @@ foreach ($dbh->query($sql) as $row) {
 				<li id="entry_<?php echo h($entry['id']); ?>">
 					<?php echo h($entry['email']); ?>
 					「<?php echo h($entry['memo']); ?>」
-					<a href="edit.php?id=<?phpecho h($entry['id']); ?>">[編集]</a>
+					<a href="edit.php?id=<?php echo h($entry['id']); ?>">[編集]</a>
 					<span class="deleteLink" data-id="<?php echo h($entry['id']); ?>">[削除]</span>
 				</li>
 			<?php endforeach ; ?>
