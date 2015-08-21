@@ -17,6 +17,9 @@
 // 	modified datetime
 // );
 
+alter table entries add status enum('active', 'deleted') default 'active' after memo;
+
+
 define('DSN', 'mysql:host=localhost;dbname=contact_dotinstall');
 define('DB_USER', 'dbuser');
 define('DB_PASSWORD', 'rwrwrwrw0521');

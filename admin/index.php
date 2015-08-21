@@ -7,7 +7,7 @@ $dbh = connectDb();
 
 $entries = array();
 
-$sql = "select * from entries order by created desc";
+$sql = "select * from entries where status = 'active' order by created desc";
 
 foreach ($dbh->query($sql) as $row) {
 	array_push($entries, $row);
